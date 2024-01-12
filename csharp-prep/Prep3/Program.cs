@@ -1,13 +1,17 @@
 using System;
+using System.Security.Cryptography;
 
 class Program
 {
     static void Main(string[] args)
     { 
         
-        Console.Write("What is the magic number? ");
-        int magicnumber = int.Parse(Console.ReadLine());
+        Random randomGenerator = new Random();
+        int magicnumber = randomGenerator.Next(1, 100);
 
+        
+        Console.Write("What is the magic number? ");
+        Console.WriteLine(magicnumber);
         
         int guess = 0;
 
