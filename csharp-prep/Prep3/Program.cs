@@ -3,20 +3,26 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
+    { 
+        
         Console.Write("What is the magic number? ");
-        string askmagicnumber = Console.ReadLine();
+        int magicnumber = int.Parse(Console.ReadLine());
 
-        Console.Write("What is your guess? ");
-        string askguess = Console.ReadLine();      
+        
+        int guess = 0;
 
-        int magicnumber = int.Parse(askmagicnumber);
-        int guess = int.Parse(askguess);
+        while (magicnumber != guess)
 
-       
+        {
+
+            Console.Write("What is your guess? ");
+            guess = int.Parse(Console.ReadLine());      
+
+        
             if (magicnumber > guess)
             {
                 Console.WriteLine("Higher");
+                
             }
 
             if (magicnumber < guess)
@@ -28,10 +34,7 @@ class Program
             {
                 Console.WriteLine("You guessed it!");
             }
-
-
-
-        
-
-    }
+         
+        }
+    }    
 }
