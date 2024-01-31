@@ -1,4 +1,5 @@
 using System.Reflection.Metadata;
+using System.Security.Cryptography;
 
 public class Scripture
 {
@@ -36,7 +37,8 @@ public class Scripture
     }
 
     public string GetDisplayText()
-    {
+    {   
+        
         string s = "";
         foreach (Word word in _words)
         {
