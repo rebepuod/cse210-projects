@@ -2,7 +2,7 @@ using System.Reflection.Metadata;
 
 public class Scripture
 {
-    // declaration (but not inaitialize; in other words keep it empty)
+   
     private Reference _reference;
     private List<Word> _words = new List<Word>();
     string _text;
@@ -26,11 +26,11 @@ public class Scripture
         Random random = new Random();
         for (int i = 0; i < numberToHide; i++)
         {
-            // Select a random word in the word list
+            
             int index = random.Next(0, _words.Count);
             Word word = _words[index];
 
-            // Hide the word (replace it with underscores)
+            
             word.Hide();
         }
     }
