@@ -9,7 +9,7 @@ class Program
     {
        
         Random getRandom = new Random();
-        int numberToHide = getRandom.Next(3,6);
+        int numberToHide = getRandom.Next(2,4);
        
         Reference r1 = new Reference("Proverbs", 3, 5, 6); 
               
@@ -20,7 +20,7 @@ class Program
         while (done != true)
         {
             Console.Clear();
-            Console.Write($"{r1.GetDisplayText()}: ");
+            Console.Write($"{r1.GetDisplayText()}  ");
             Console.WriteLine(s1.GetDisplayText());           
             Console.Write("Press enter to continue or type 'quit' to finish:");
             string input = Console.ReadLine();
