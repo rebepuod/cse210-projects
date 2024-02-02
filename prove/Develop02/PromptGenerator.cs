@@ -11,11 +11,13 @@ public class PromptGenerator
     {
       Random randomGenerator = new Random();
       int number = randomGenerator.Next(0, 6);
+
+      string c = "";
     
       for (int i = 0; i <= 0; i ++)
         {
-          Console.WriteLine(_prompts[number]);        
-        }
-      return "";             
+           c = _prompts[number];          
+        }     
+        return c;     
     }
 }
