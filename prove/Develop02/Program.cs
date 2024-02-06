@@ -71,9 +71,7 @@ class Program
         {
             Console.Write("What is the filename?: ");
             string file = Console.ReadLine();
-            theJournal.LoadFromFile(file);
-           
-            
+            theJournal.LoadFromFile(file);                      
         }
 
         else if (user == "4")
