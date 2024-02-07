@@ -5,18 +5,10 @@ public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
-    Entry newEntry = new Entry();
-
- 
-
     public void AddEntry(Entry newEntry)
     {
         
-        newEntry._entryText = Console.ReadLine();
-        
-         _entries.Add(newEntry);
-            
-        
+         _entries.Add(newEntry);     
     }
 
     public void DisplayAll()
@@ -24,8 +16,7 @@ public class Journal
         
         foreach(Entry entry in _entries)
         {
-            Console.WriteLine(entry);
-            Console.WriteLine();
+            entry.Display();
         }
     }
 
@@ -43,14 +34,15 @@ public class Journal
     }
 
     public void LoadFromFile(string file)
-    {
-       
+    {   
+        // _entries.Clear();
         string[] lines = System.IO.File.ReadAllLines(file);
        
         foreach (string line in lines)
         {
-            string[] parts = line.Split("|");
-          
+            Entry newEntry = new Entry();
+            string[] parts;
+            parts = line.Split("|");  
             
             newEntry._date = parts[0]; 
             newEntry._promptText = parts[1];

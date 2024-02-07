@@ -19,9 +19,4 @@ public class Entry
         Console.WriteLine(_entryText);
     }
 
-    public override string ToString()
-    {
-        return $"Date: {_date} - Prompt: {_promptText} \n{_entryText}";
-    }
-
 }

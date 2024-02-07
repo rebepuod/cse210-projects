@@ -10,21 +10,9 @@ class Program
         
         
         // Entry object
-        Entry anEntry = new Entry();
+        
         DateTime _date = DateTime.Now;
         string dateText = _date.ToShortDateString();
-    
-
-
-
-        string promptText = prompt.GetRandomPrompt();
-        Console.WriteLine(promptText); 
-        newEntry._date = dateText;
-        newEntry._promptText = promptText; 
-        newEntry._entryText = Console.ReadLine(); 
-        
-        anEntry._date = dateText;
-        // anEntry._promptText = prompt.GetRandomPrompt();
 
         Journal theJournal = new Journal();
 
@@ -66,11 +54,12 @@ class Program
 
         if (user == "1")
         {
-            // string promptText = prompt.GetRandomPrompt();
-            // Console.WriteLine(promptText); 
-            // anEntry._date = dateText;
-            // anEntry._promptText = promptText; 
-            // anEntry._entryText = Console.ReadLine();   
+            Entry anEntry = new Entry();
+            string promptText = prompt.GetRandomPrompt();
+            Console.WriteLine(promptText); 
+            anEntry._date = dateText;
+            anEntry._promptText = promptText; 
+            anEntry._entryText = Console.ReadLine();   
             
             theJournal.AddEntry(anEntry); // Add the entry to the journal
         }
