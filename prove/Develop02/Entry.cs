@@ -1,3 +1,9 @@
+// "Object"
+// "Object oriented programming"
+// "Programming with classes"
+
+// A class is a blueprint
+// An object is the thing itself
 public class Entry
 {
 
@@ -11,6 +17,11 @@ public class Entry
     {
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
         Console.WriteLine(_entryText);
+    }
+
+    public override string ToString()
+    {
+        return $"Date: {_date} - Prompt: {_promptText} \n{_entryText}";
     }
 
 }

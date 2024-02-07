@@ -49,18 +49,20 @@ public void DisplayPrompt()
    Console.WriteLine();
    Console.WriteLine("Consider the following prompt:");
    Console.WriteLine();
-   Console.WriteLine($"--- {prompt} ---");
+   Console.WriteLine($"--- {prompt} ---\n");
    Console.WriteLine("When you have something in mind, press enter to continue");
    Console.ReadLine();
-   Console.Clear();
+   
 }
 
 public void DisplayQuestions()
 {    
    DateTime startTime = DateTime.Now;
    DateTime endTime = startTime.AddSeconds(GetDuration());
+   Console.WriteLine("\nNow ponder on each of the following questions as they related to this experience.");
+   ShowCountDown(5);
+   Console.Clear();
 
-   //POR QUE NO TERMINAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
    while(DateTime.Now <= endTime)
       {

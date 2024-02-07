@@ -93,9 +93,10 @@ public void ShowSpinner(int seconds)
 
 public void ShowCountDown(int seconds)
 {
+    Console.Write("You may begin in: ");
     for(int i = seconds; i > 0 ; i--)
     {
-    Console.Write($"{i}...");
+    Console.Write($"{i}");
     Thread.Sleep(1000);
     Console.Write("\b \b");
     }

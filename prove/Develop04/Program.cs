@@ -59,7 +59,10 @@ class Program
 
             else if (user == "3")
             {
-
+                l1.DisplayStartingMessage();
+                l1.Run();
+                Console.WriteLine();
+                l1.DisplayEndingMessage();
             }
         }
     }
