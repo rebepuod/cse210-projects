@@ -1,0 +1,4 @@
+170
+SimpleGoal|Correr|tertdgf|10|True
+EternalGoal|leer escrituras|leer todos dias|20
+ChecklistGoal|templo|ir a ltemple|30|2|2|100
